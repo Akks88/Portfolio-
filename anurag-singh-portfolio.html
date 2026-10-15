@@ -1,0 +1,922 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0a0e17" />
+
+<title>Anurag Singh — Java Backend & Full Stack Developer</title>
+<meta name="description" content="Portfolio of Anurag Singh, a Java Backend and Full Stack Developer and Computer Science Engineering student. Explore projects, skills, published research, and resume." />
+<meta name="keywords" content="Anurag Singh, Java Developer, Backend Developer, Full Stack Developer, Spring Boot, Portfolio, Computer Science Engineering" />
+<meta name="author" content="Anurag Singh" />
+<meta name="robots" content="index, follow" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Anurag Singh — Java Backend & Full Stack Developer" />
+<meta property="og:description" content="Java Backend & Full Stack Developer building scalable applications. Explore my projects, skills, published research, and resume." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Anurag Singh — Java Backend & Full Stack Developer" />
+<meta name="twitter:description" content="Java Backend & Full Stack Developer building scalable applications." />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Anurag Singh",
+  "jobTitle": "Java Backend Developer",
+  "sameAs": ["https://github.com/anuragsingh", "https://linkedin.com/in/anuragsingh"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@300..800&family=JetBrains+Mono:wght@400..600&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          void: "#0a0e17",
+          surface: "#10151f",
+          surface2: "#151b28",
+          line: "rgba(255,255,255,0.08)",
+          lineStrong: "rgba(255,255,255,0.14)",
+          textPrimary: "#e9edf5",
+          textMuted: "#8a93a6",
+          textFaint: "#566078",
+          accent: "#6e8cff",
+          accent2: "#37e6c3",
+          accent3: "#b98cff",
+          warn: "#ffb454",
+        },
+        fontFamily: {
+          display: ["Space Grotesk", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+          body: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+          mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "monospace"],
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  :root { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    background-color: #0a0e17;
+    color: #e9edf5;
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection { background: #6e8cff; color: #0a0e17; }
+
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: #0a0e17; }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(#6e8cff, #37e6c3);
+    border-radius: 999px;
+  }
+
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid #37e6c3;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  .glass {
+    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .glass-strong {
+    background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.03));
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255,255,255,0.14);
+  }
+  .text-gradient {
+    background: linear-gradient(120deg, #6e8cff 0%, #37e6c3 55%, #b98cff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .section-label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+    color: #37e6c3;
+  }
+  .container-px {
+    padding-left: clamp(1.25rem, 5vw, 6rem);
+    padding-right: clamp(1.25rem, 5vw, 6rem);
+  }
+
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-16px) rotate(1deg); }
+  }
+  @keyframes drift {
+    0% { transform: translate(0,0) scale(1); }
+    33% { transform: translate(3%,-4%) scale(1.05); }
+    66% { transform: translate(-3%,3%) scale(0.98); }
+    100% { transform: translate(0,0) scale(1); }
+  }
+  @keyframes pulseSoft { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
+  @keyframes grain {
+    0%, 100% { transform: translate(0,0); }
+    10% { transform: translate(-1%,-2%); }
+    30% { transform: translate(2%,1%); }
+    50% { transform: translate(-2%,2%); }
+    70% { transform: translate(1%,-1%); }
+    90% { transform: translate(-1%,2%); }
+  }
+
+  .animate-blink { animation: blink 1s step-end infinite; }
+  .animate-float { animation: float 6s ease-in-out infinite; }
+  .animate-drift { animation: drift 24s linear infinite; }
+  .animate-pulse-soft { animation: pulseSoft 3s ease-in-out infinite; }
+
+  .grain-overlay {
+    position: fixed;
+    inset: -10%;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    animation: grain 1s steps(2) infinite;
+  }
+
+  #scroll-progress-bar {
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.1s linear;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .reveal.in-view { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+
+  .skill-bar-fill {
+    width: 0%;
+    transition: width 1s ease-out;
+  }
+
+  .project-card:hover .project-icon {
+    transform: scale(1.1);
+    opacity: 0.3;
+  }
+  .project-card:hover .project-glow {
+    opacity: 1;
+  }
+
+  .icon { display: inline-block; vertical-align: middle; }
+
+  #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+  #mobile-menu.open { max-height: 500px; }
+</style>
+</head>
+
+<body class="relative min-h-screen">
+
+  <!-- Scroll progress -->
+  <div class="fixed left-0 right-0 top-0 z-[60] h-[3px] bg-white/5">
+    <div id="scroll-progress-bar" class="h-full w-full bg-gradient-to-r from-accent via-accent2 to-accent3"></div>
+  </div>
+
+  <!-- Animated background -->
+  <div aria-hidden="true" class="fixed inset-0 -z-10 overflow-hidden bg-void">
+    <div class="absolute inset-0 opacity-[0.14]" style="background-image:linear-gradient(to right, rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.08) 1px, transparent 1px); background-size:56px 56px; mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 90%); -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 90%);"></div>
+    <div class="absolute -top-40 -left-32 h-[32rem] w-[32rem] rounded-full bg-accent/25 blur-[120px] animate-drift"></div>
+    <div class="absolute top-1/3 -right-40 h-[28rem] w-[28rem] rounded-full bg-accent2/20 blur-[120px] animate-drift" style="animation-delay:-8s;"></div>
+    <div class="absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-accent3/15 blur-[130px] animate-drift" style="animation-delay:-16s;"></div>
+    <div class="absolute inset-0" style="background:radial-gradient(ellipse at center, transparent 0%, #0a0e17 85%);"></div>
+    <div class="grain-overlay"></div>
+  </div>
+
+  <!-- Navbar -->
+  <header id="navbar" class="fixed inset-x-0 top-0 z-50 py-5 transition-all duration-300">
+    <div class="container-px mx-auto flex max-w-6xl items-center justify-between">
+      <a href="#top" class="font-display text-lg font-semibold tracking-tight text-textPrimary">
+        <span class="text-gradient">AS</span>
+        <span class="ml-2 hidden font-mono text-xs font-normal text-textMuted sm:inline">/anurag-singh</span>
+      </a>
+
+      <nav id="desktop-nav" class="hidden items-center gap-1 rounded-full px-2 py-2 md:flex">
+        <a href="#about" class="rounded-full px-4 py-1.5 font-mono text-[13px] text-textMuted transition-colors hover:bg-white/5 hover:text-textPrimary">About</a>
+        <a href="#education" class="rounded-full px-4 py-1.5 font-mono text-[13px] text-textMuted transition-colors hover:bg-white/5 hover:text-textPrimary">Education</a>
+        <a href="#skills" class="rounded-full px-4 py-1.5 font-mono text-[13px] text-textMuted transition-colors hover:bg-white/5 hover:text-textPrimary">Skills</a>
+        <a href="#projects" class="rounded-full px-4 py-1.5 font-mono text-[13px] text-textMuted transition-colors hover:bg-white/5 hover:text-textPrimary">Projects</a>
+        <a href="#research" class="rounded-full px-4 py-1.5 font-mono text-[13px] text-textMuted transition-colors hover:bg-white/5 hover:text-textPrimary">Research</a>
+        <a href="#achievements" class="rounded-full px-4 py-1.5 font-mono text-[13px] text-textMuted transition-colors hover:bg-white/5 hover:text-textPrimary">Achievements</a>
+        <a href="#contact" class="rounded-full px-4 py-1.5 font-mono text-[13px] text-textMuted transition-colors hover:bg-white/5 hover:text-textPrimary">Contact</a>
+      </nav>
+
+      <a href="#contact" class="hidden rounded-full bg-gradient-to-r from-accent to-accent2 px-5 py-2 font-mono text-[13px] font-medium text-void transition-transform hover:scale-105 md:inline-block">Hire me</a>
+
+      <button id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" class="glass rounded-full p-2 text-textPrimary md:hidden">
+        <svg id="menu-icon-open" class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+        <svg id="menu-icon-close" class="icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu" class="mx-4 mt-3 rounded-2xl md:hidden">
+      <div class="glass-strong flex flex-col gap-1 p-3">
+        <a href="#about" class="rounded-xl px-4 py-3 font-mono text-sm text-textMuted transition-colors hover:bg-white/5 hover:text-textPrimary">About</a>
+        <a href="#education" class="rounded-xl px-4 py-3 font-mono text-sm text-textMuted transition-colors hover:bg-white/5 hover:text-textPrimary">Education</a>
+        <a href="#skills" class="rounded-xl px-4 py-3 font-mono text-sm text-textMuted transition-colors hover:bg-white/5 hover:text-textPrimary">Skills</a>
+        <a href="#projects" class="rounded-xl px-4 py-3 font-mono text-sm text-textMuted transition-colors hover:bg-white/5 hover:text-textPrimary">Projects</a>
+        <a href="#research" class="rounded-xl px-4 py-3 font-mono text-sm text-textMuted transition-colors hover:bg-white/5 hover:text-textPrimary">Research</a>
+        <a href="#achievements" class="rounded-xl px-4 py-3 font-mono text-sm text-textMuted transition-colors hover:bg-white/5 hover:text-textPrimary">Achievements</a>
+        <a href="#contact" class="rounded-xl px-4 py-3 font-mono text-sm text-textMuted transition-colors hover:bg-white/5 hover:text-textPrimary">Contact</a>
+        <a href="#contact" class="mt-1 rounded-xl bg-gradient-to-r from-accent to-accent2 px-4 py-3 text-center font-mono text-sm font-medium text-void">Hire me</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="top" class="relative flex min-h-screen items-center overflow-hidden pt-28 pb-16">
+      <div class="container-px mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+
+        <div class="reveal in-view">
+          <div class="mb-6 inline-flex items-center gap-2 rounded-full glass px-4 py-1.5">
+            <span class="h-2 w-2 rounded-full bg-accent2 animate-pulse-soft"></span>
+            <span class="font-mono text-xs text-textMuted">open to backend & full-stack roles</span>
+          </div>
+
+          <h1 class="font-display text-5xl font-semibold leading-[1.05] tracking-tight text-textPrimary sm:text-6xl lg:text-[3.6rem]">
+            Hi, I'm <span class="text-gradient">Anurag Singh</span>
+          </h1>
+
+          <div class="mt-4 h-9 font-mono text-lg text-textMuted sm:text-xl">
+            <span class="text-accent2">&gt;</span> <span id="typed-text"></span><span class="ml-0.5 inline-block h-5 w-[2px] translate-y-0.5 bg-accent2 animate-blink"></span>
+          </div>
+
+          <p class="mt-6 max-w-xl text-[15px] leading-relaxed text-textMuted sm:text-base">
+            I design and build reliable, scalable backend systems in Java — and the full-stack products they power.
+          </p>
+
+          <div class="mt-9 flex flex-wrap items-center gap-3">
+            <a href="data:application/pdf;base64,JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUiAvRjMgNCAwIFIgL0Y0IDUgMCBSCj4+CmVuZG9iagoyIDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GMSAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EtQm9sZCAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjIgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iago0IDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhLU9ibGlxdWUgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YzIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNSAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkT2JsaXF1ZSAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjQgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Db250ZW50cyAxMSAwIFIgL01lZGlhQm94IFsgMCAwIDYxMiA3OTIgXSAvUGFyZW50IDEwIDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAvVHJhbnMgPDwKCj4+IAogIC9UeXBlIC9QYWdlCj4+CmVuZG9iago3IDAgb2JqCjw8Ci9Db250ZW50cyAxMiAwIFIgL01lZGlhQm94IFsgMCAwIDYxMiA3OTIgXSAvUGFyZW50IDEwIDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAvVHJhbnMgPDwKCj4+IAogIC9UeXBlIC9QYWdlCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9QYWdlTW9kZSAvVXNlTm9uZSAvUGFnZXMgMTAgMCBSIC9UeXBlIC9DYXRhbG9nCj4+CmVuZG9iago5IDAgb2JqCjw8Ci9BdXRob3IgKFwoYW5vbnltb3VzXCkpIC9DcmVhdGlvbkRhdGUgKEQ6MjAyNjA3MTAwNDQxNDMrMDAnMDAnKSAvQ3JlYXRvciAoXCh1bnNwZWNpZmllZFwpKSAvS2V5d29yZHMgKCkgL01vZERhdGUgKEQ6MjAyNjA3MTAwNDQxNDMrMDAnMDAnKSAvUHJvZHVjZXIgKFJlcG9ydExhYiBQREYgTGlicmFyeSAtIFwob3BlbnNvdXJjZVwpKSAKICAvU3ViamVjdCAoXCh1bnNwZWNpZmllZFwpKSAvVGl0bGUgKFwoYW5vbnltb3VzXCkpIC9UcmFwcGVkIC9GYWxzZQo+PgplbmRvYmoKMTAgMCBvYmoKPDwKL0NvdW50IDIgL0tpZHMgWyA2IDAgUiA3IDAgUiBdIC9UeXBlIC9QYWdlcwo+PgplbmRvYmoKMTEgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggMjA3Mgo+PgpzdHJlYW0KR2F1SEw5NjkpXiZBSiRDb0hkTW8iTEsoPSNhQTdBYGluPCtDcERaTzA3dSpzYDAqVGopOFQ0OSsubyw6QC9MIjc4ZFVgLThCbDcrclVuVkJDalpsZSlQbUZILFBaWFBKMmY2TyE6X1RON0tfazg6NEFecFEpKmtOSWMoPjNnLD8zYFwpIm1YaUdIZDNTW1IsT2JPLj8tYjY8ZWBVdV9oWDlNYi5PWjtLKWhQPmZ1aUpFKD5hTmhcSiVHLWVLSTtbQFksU1VIKztoXz1uLFgxY0Y2KWxpajNIVj0lPG88IjxCVDlyT2QmdSlSJ15pRjZNNVw2OEkmXnBCaEMzUiVZQkhOYyRjb0hlOSlFa0FXTDMjN2NNOSZnIz9qbydvVmc4SFQuJEZkI0tsVk5uSD03bixiKlpjKiEkJEgnKENwMSJOMWUkIVReYSZAP2xpXiRHLlplRiJwNl5tWyVxbDwnc21dWGxtR08hS05YRi5mMSVxYElYPnFwRGxET0RPNEVQOCwjYlhWal1FVm9cTjhPZHJnJSozWlVZZiZiZks/az5QbklLWm9WRGQrTCZZclJoTWpfW0kkdXA8YkUuS1NcUVMnJiwyRDxSNWxEb1lOJmhObkpxSVldXi5jO25XKnQpPFlcK2M6NU1uPCYzPSxmbEw9Zj1gViNvKDUtQzQ/RCg/cWBjQTM6aChrcjBNLE1qcmFTbzswKUBjWjxaPSc5NS9wLWJAOSQ2cTBeMzZOS01yRzlWNGBYOz5uYT0/MVcsLC51QChkblFUVzVrczNOaVJEIVtFTzlgWnBEISxTaE1IMEUtJEtaQ0ItZXNCZCI3OmZHYEZXUiUoRy5LTV1JNUBeJUA4PW5WQlZuY0k+bTBMQjAhQyFpLmwvUmslODNAZ0M8KypqIz9UTVpsLktXRU1mVFJpTEMyTjFYRTw6Ri1tM3EhckdQX0J1UkxiNmpXL2BDXlMoZiJlNW5WQVlsPDZGYnViWlVoI2BYLDstO0MkPWpZbFRhMEY8UU9eInNmL0lYSDU2MDx1TkRiV1s7JScxKEF0dUgsQStbSm83USJHYzciJmNwZltKLCpqX148XFRCRkxlbzJEOFdOM2koZXBIVlZbVDtROG0pRW4ub2pxaS08K3V0MDosU0E8KkJPRkwkUjUsT1QiY2heJGIrXGxeKzBCPjZNVE84UzRHMlBtVUc4RDApPD9dJUArXmZCX0VhPlRLOC9vYSxLQEZrZ0dfZydKIVpjYEBfOkFmKGYjLDIkP1g+a0RYTCpoVWtpcCs0WD0sIl5GT0AzamgxXlteI1FlOEFvY3AhNmZwcWdOREw+bjRLXTZROFxIUEJpMUpibGkrKCNRM1pPQWZdX1htYDUubFNFR2AibChKVSJgKFZVOFBPXyknLy9BIiY7W0wwN1hRa3JhKi1zRScvJVg+XkRdOFhRcEMxNztUYlZbbGQjIkBFcDN0XDwsNy04R0ZDKlhAW2shPEpSXUg6YGhuL2AqaDxQT25yOj40ZyNsIUdEJ0RUVzAnIV4xNUNCaioyaTRTN1dYJycjM09UQElLZj86bicuczskK25YTydhYERDc2xYN2gqSShfNS5MQUBsLDBTPz1DMV9sJXBuZEFrNS8oWUNuIzN0PThPZjFVVltCUCYwa2AuaWVKQjEuI3NOQVJlazlTWXVqTjJibWM/Pm9VVjRsLy9yTVA8IztjUHNwaUhLZ0ZEQVUkL2RLPzVBMj9sQj82YUYvVCE8Vi1wTix0QmBcamYwOlpUSD5JQlFlNi1SJEYvZzdwZ0dTSDh0UkdiMlw5SV5XcypKay00MydxOCsiNG1aKUIiPz8rQUsyPSlUbThpRGU5Vl86Q0cjZzw8WzpDQWBbJjRhckNfQCEjJHRYUldtXDFjPyN0OmVzdGtxb3QoIVUhXmk0QGNPRjdaLDk1S282ZC40QSEiSWlwSTtiZnJLQ2o+aG1LPkRAaUcvS2FgMUZzX0BbXkhXREdFc2c4VVVlOjFgOUg/Wy8lUjpOci9eR0h1MT9fXi1EXDhCQU5qK05EWUQyYW9zN0AkaFA+P3I5ZEE0ZUNtLTQ0NyY0OUdOMkliMVRuRCwvc28oOmZJNDdrdTVZP0JxIjUsLmVgTFYqQmcuRCFALCJZMiVAMk01ZUw4PD5dJzhfPFAlU11jRj1WZiY9UW5fSWoxLVw2KE9maCtbUkFBJlkjbU9kanBQLWZkclUtXUV0YDonLG0tbT4jclI/PmNBOktrKVtJaj5WVydDKmgqUE4yMUMnTCZwWDtxLFRXZGgxMzkvYUEtb3E7QUYpIyRoQWNTLEpFRj8salFgPlk+XCJJS0ROZjFEYXI9VCJPVSMhYD4tS2FCJCFqamUjLUJEYzhRaV4nZSQuIUM7Q1lwYkJjMXVDPkJiaGZHXUxrWDk3NW5DWSQtIk4+Xl0sKDFQQmNsJjJBKHJuPT5PYig3WT5pMlJjWzZEJCpYOFwwYktYQ11URy8sY2xELzZpKTlcUlk3JkQuOzkmWzEhT3IhVkchSicoJU9BX09JJ0lZUWQ/YVorJHU5L15JJmUkZTROYltwXk0rMGBnJjVQNkkwVituTUZMTlJAWlQzKG9jLllZU0wsal08PWolcF0tXGk+OjNZPDlLanFnNmBKO0IhYFBXWkIsWmYoI3BEMkxBWjcpRDw8cFxUJlJqVyM+ZDozTmVBcmAvZ1csZ1oxRTdIXUZAXV5BU2MpN1hva3FQPXJOUDFtbXAzVVwkcjZkKjRndDVUfj5lbmRzdHJlYW0KZW5kb2JqCjEyIDAgb2JqCjw8Ci9GaWx0ZXIgWyAvQVNDSUk4NURlY29kZSAvRmxhdGVEZWNvZGUgXSAvTGVuZ3RoIDcwMAo+PgpzdHJlYW0KR2F1MSs/VmZFMSdaSnUsLklKRzhCR05dMHBLImwiMGBmXjlabVQyOGpMLDEyNDB0SllyVXNLbydRcW1XM2xHSlZbWnAqSW8vZXJCSzktOVZtU3NYNjxsMm11IylrcFsiO1Y0c1BhPSdTN21CSzBXQTxSJD40QCtaNzFsPW1RSUEkRDlIMlorMCw9Xi9QalFpW09yQUBLQDFgNyM2KCUzbzoyJXB1UFhIJzpjQj5PN1pcIkM/J1w6Uj1XcWxpM1IlbWZaT18/PjopODM6Z2BuLydiQ1AzV0BFYTFMU19HcjZwLDkrJlVLbk5tRGRDUCVbI1w+OnNDQmBsalsoK05HaT5uMFc6cWheSz5MIyRsPCMnUWRsVms8XTlXKydeaSN0bmotJXUvVGBwXSJxbixQSVZPaFpccS9qYDwzKl8uYi5QWEA1RGgvXml1JWBUOkApIjRPYmslIlA6XWZuXC0oN2tcZ2tCITV1NGxnWWg8L24xWE4/R25UZVhrTmVLJ0FRay9QcyF0VFxOSChHZDI8IzJOPj1xMkYyJlVaIzIkVyplNTk0JVpcPmNuakU8azVOVTQiODprQUI6Rlk0TjomK01vSiw4ODlwM2gqQV0uVzg6XVVlL2YwTCgkLnFjZkB0UFUyNyk8LVFdR05dW3FNWWxOYl4wYzInYEYpQFBzSXBZUVhPcTRlYFYmV1xlV1dzKjhMJzkvamswRTE7WElUNyRfQl9xNz5pRkhVOWtkaHM/SWVwXF9IM3VYY2hfQl1VWFdSQkpOUTlZWCVxOT0sdTFqT2RTV2pPQW5pVjJITyNnUmdLc14+Q0dVNGcpJShxOEJUPm9WYDtgMnVDSy5LYSReLmZvLiMsVm1XcDVRZT1gZkk4YCIlUUQ0biI/JWNFcWJJRk0icGo+OlFsJTkpVHFVN1pUbXNKYyx+PmVuZHN0cmVhbQplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDA2MSAwMDAwMCBuIAowMDAwMDAwMTIyIDAwMDAwIG4gCjAwMDAwMDAyMjkgMDAwMDAgbiAKMDAwMDAwMDM0MSAwMDAwMCBuIAowMDAwMDAwNDU2IDAwMDAwIG4gCjAwMDAwMDA1NzUgMDAwMDAgbiAKMDAwMDAwMDc3MCAwMDAwMCBuIAowMDAwMDAwOTY1IDAwMDAwIG4gCjAwMDAwMDEwMzQgMDAwMDAgbiAKMDAwMDAwMTMxNCAwMDAwMCBuIAowMDAwMDAxMzgwIDAwMDAwIG4gCjAwMDAwMDM1NDQgMDAwMDAgbiAKdHJhaWxlcgo8PAovSUQgCls8YjEwODJjOWRlY2NhYjg0M2VlZGUyMWU4ZDZlNWE4YjM+PGIxMDgyYzlkZWNjYWI4NDNlZWRlMjFlOGQ2ZTVhOGIzPl0KJSBSZXBvcnRMYWIgZ2VuZXJhdGVkIFBERiBkb2N1bWVudCAtLSBkaWdlc3QgKG9wZW5zb3VyY2UpCgovSW5mbyA5IDAgUgovUm9vdCA4IDAgUgovU2l6ZSAxMwo+PgpzdGFydHhyZWYKNDMzNQolJUVPRgo=" download="Anurag_Singh_Resume.pdf" class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent2 px-6 py-3 text-sm font-medium text-void transition-transform hover:scale-105">
+              <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Download Resume
+            </a>
+            <a href="#contact" class="inline-flex items-center gap-2 rounded-full glass-strong px-6 py-3 text-sm font-medium text-textPrimary transition-colors hover:bg-white/10">
+              <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              Hire Me
+            </a>
+            <a href="#projects" class="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-textMuted transition-colors hover:text-textPrimary">
+              View Projects
+              <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+            </a>
+          </div>
+
+          <div class="mt-10 flex items-center gap-4">
+            <span class="font-mono text-xs text-textFaint">connect —</span>
+            <a href="https://github.com/anuragsingh" target="_blank" rel="noreferrer" aria-label="GitHub" class="glass flex h-10 w-10 items-center justify-center rounded-full text-textMuted transition-all hover:-translate-y-0.5 hover:text-accent2">
+              <svg class="icon" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.2.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/anuragsingh" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="glass flex h-10 w-10 items-center justify-center rounded-full text-textMuted transition-all hover:-translate-y-0.5 hover:text-accent2">
+              <svg class="icon" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.36 4.26 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.78C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.78 24h20.44c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/></svg>
+            </a>
+            <a href="mailto:anurag.singh.dev@example.com" aria-label="Email" class="glass flex h-10 w-10 items-center justify-center rounded-full text-textMuted transition-all hover:-translate-y-0.5 hover:text-accent2">
+              <svg class="icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2 in-view relative mx-auto w-full max-w-sm lg:max-w-none">
+          <div class="relative z-10 mx-auto w-64 overflow-hidden rounded-[2rem] border border-lineStrong shadow-2xl shadow-black/40 sm:w-72 animate-float">
+            <!-- Replace this image with your real uploaded photo (see README notes at bottom of page) -->
+            <img src="data:image/svg+xml;utf8,%3Csvg%20width%3D%22640%22%20height%3D%22800%22%20viewBox%3D%220%200%20640%20800%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23151b28%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%230a0e17%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22fig%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%232a3244%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%231a2030%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22640%22%20height%3D%22800%22%20fill%3D%22url(%23bg)%22%2F%3E%3Ccircle%20cx%3D%22320%22%20cy%3D%22300%22%20r%3D%22130%22%20fill%3D%22url(%23fig)%22%2F%3E%3Cpath%20d%3D%22M120%20780%20C120%20590%20200%20480%20320%20480%20C440%20480%20520%20590%20520%20780%20Z%22%20fill%3D%22url(%23fig)%22%2F%3E%3Ctext%20x%3D%22320%22%20y%3D%22720%22%20text-anchor%3D%22middle%22%20font-family%3D%22monospace%22%20font-size%3D%2220%22%20fill%3D%22%23566078%22%3Ereplace%20with%20profile%20photo%3C%2Ftext%3E%3C%2Fsvg%3E"
+                 alt="Anurag Singh" class="aspect-[4/5] w-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-void/70 via-transparent to-transparent"></div>
+          </div>
+
+          <div class="absolute left-1/2 top-1/2 -z-10 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/30 blur-[90px]"></div>
+
+          <div class="glass-strong absolute -bottom-8 right-0 w-64 rounded-2xl p-4 shadow-xl sm:-right-8 sm:w-80">
+            <div class="mb-3 flex items-center gap-1.5">
+              <span class="h-2.5 w-2.5 rounded-full" style="background:#ff5f57;"></span>
+              <span class="h-2.5 w-2.5 rounded-full" style="background:#febc2e;"></span>
+              <span class="h-2.5 w-2.5 rounded-full" style="background:#28c840;"></span>
+              <span class="ml-2 font-mono text-[11px] text-textFaint">Developer.java</span>
+            </div>
+            <pre class="overflow-x-auto font-mono text-[12px] leading-relaxed text-textMuted"><code><span class="text-accent3">public class</span> <span class="text-accent2">Developer</span> {
+  <span class="text-accent3">public static void</span> main(String[] args) {
+    System.out.<span class="text-accent">println</span>(
+      <span class="text-warn">"Hello, I'm Anurag Singh"</span>
+    );
+  }
+}</code></pre>
+            <div class="mt-3 flex items-center gap-2 border-t border-line pt-3">
+              <span class="h-1.5 w-1.5 rounded-full bg-accent2 animate-pulse-soft"></span>
+              <span class="font-mono text-[11px] text-textFaint">BUILD SUCCESS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="relative py-28">
+      <div class="container-px mx-auto max-w-6xl">
+        <div class="reveal mb-14">
+          <p class="section-label">// 01 about</p>
+          <h2 class="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl">The person behind the code</h2>
+        </div>
+
+        <div class="grid grid-cols-1 gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+          <div class="reveal glass rounded-3xl p-8 sm:p-10">
+            <p class="text-[15px] leading-relaxed text-textMuted sm:text-base">
+              Computer Science Engineering student who enjoys turning ambiguous problems into clean, working software. My focus is Java backend development — servlets, JDBC, and now Spring Boot — paired with just enough front-end craft to ship a complete product end to end. Comfortable presenting to a room, debugging at 1am, and picking up whatever a project needs next.
+            </p>
+            <p class="mt-5 text-[15px] leading-relaxed text-textMuted sm:text-base">
+              I care about writing code that reads clearly and holds up under real use — not just code that runs once in a demo. Outside of coursework, I keep building small projects to stay sharp on the full stack, from the database schema up to the interface.
+            </p>
+          </div>
+
+          <div class="reveal reveal-delay-1 glass rounded-3xl p-8">
+            <p class="mb-5 font-mono text-xs text-textFaint">// soft skills</p>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3 text-sm text-textPrimary"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent2/15 text-accent2">✔</span>English Communication</li>
+              <li class="flex items-center gap-3 text-sm text-textPrimary"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent2/15 text-accent2">✔</span>Leadership</li>
+              <li class="flex items-center gap-3 text-sm text-textPrimary"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent2/15 text-accent2">✔</span>Teamwork</li>
+              <li class="flex items-center gap-3 text-sm text-textPrimary"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent2/15 text-accent2">✔</span>Problem Solving</li>
+              <li class="flex items-center gap-3 text-sm text-textPrimary"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent2/15 text-accent2">✔</span>Time Management</li>
+              <li class="flex items-center gap-3 text-sm text-textPrimary"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent2/15 text-accent2">✔</span>Presentation Skills</li>
+              <li class="flex items-center gap-3 text-sm text-textPrimary"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent2/15 text-accent2">✔</span>Adaptability</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="relative py-28">
+      <div class="container-px mx-auto max-w-6xl">
+        <div class="reveal mb-14">
+          <p class="section-label">// 02 education</p>
+          <h2 class="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl">Academic background</h2>
+        </div>
+
+        <div class="relative border-l border-line pl-8 sm:pl-10">
+          <div class="reveal relative mb-10">
+            <span class="absolute -left-[2.55rem] top-1.5 flex h-8 w-8 items-center justify-center rounded-full glass-strong text-accent2 sm:-left-[3.05rem]">
+              <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            </span>
+            <div class="glass rounded-2xl p-6 sm:p-8">
+              <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
+                <div>
+                  <h3 class="font-display text-lg font-semibold text-textPrimary sm:text-xl">B.Tech, Computer Science Engineering</h3>
+                  <p class="mt-1 text-sm text-textMuted">Chandigarh Engineering College, Jhanjeri</p>
+                  <p class="mt-1 font-mono text-xs text-textFaint">2022 — 2026</p>
+                </div>
+                <div class="glass-strong shrink-0 rounded-xl px-5 py-3 text-center">
+                  <p class="font-mono text-[11px] uppercase tracking-wide text-textFaint">CGPA</p>
+                  <p class="font-display text-xl font-semibold text-gradient">7.84</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-1 relative">
+            <span class="absolute -left-[2.55rem] top-1.5 flex h-8 w-8 items-center justify-center rounded-full glass-strong text-accent2 sm:-left-[3.05rem]">
+              <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            </span>
+            <div class="glass rounded-2xl p-6 sm:p-8">
+              <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
+                <div>
+                  <h3 class="font-display text-lg font-semibold text-textPrimary sm:text-xl">Diploma, Computer Science Engineering</h3>
+                  <p class="mt-1 text-sm text-textMuted">Government Polytechnic Nathusari Chopta</p>
+                  <p class="mt-1 font-mono text-xs text-textFaint">2019 — 2022</p>
+                </div>
+                <div class="glass-strong shrink-0 rounded-xl px-5 py-3 text-center">
+                  <p class="font-mono text-[11px] uppercase tracking-wide text-textFaint">Percentage</p>
+                  <p class="font-display text-xl font-semibold text-gradient">74.74%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="relative py-28">
+      <div class="container-px mx-auto max-w-6xl">
+        <div class="reveal mb-14">
+          <p class="section-label">// 03 skills</p>
+          <h2 class="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl">Stack &amp; tooling</h2>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div class="reveal glass rounded-3xl p-7">
+            <p class="font-mono text-xs text-textFaint">// core language &amp; server-side</p>
+            <h3 class="mt-2 mb-6 font-display text-lg font-semibold text-textPrimary">Backend</h3>
+            <div class="space-y-5" data-skill-group>
+              <div data-skill data-level="90"><div class="mb-1.5 flex items-center justify-between"><span class="font-mono text-[13px] text-textPrimary">Java</span><span class="font-mono text-[11px] text-textFaint">90%</span></div><div class="h-1.5 w-full overflow-hidden rounded-full bg-white/5"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-accent to-accent2"></div></div></div>
+              <div data-skill data-level="85"><div class="mb-1.5 flex items-center justify-between"><span class="font-mono text-[13px] text-textPrimary">Advanced Java</span><span class="font-mono text-[11px] text-textFaint">85%</span></div><div class="h-1.5 w-full overflow-hidden rounded-full bg-white/5"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-accent to-accent2"></div></div></div>
+              <div data-skill data-level="82"><div class="mb-1.5 flex items-center justify-between"><span class="font-mono text-[13px] text-textPrimary">Servlet</span><span class="font-mono text-[11px] text-textFaint">82%</span></div><div class="h-1.5 w-full overflow-hidden rounded-full bg-white/5"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-accent to-accent2"></div></div></div>
+              <div data-skill data-level="80"><div class="mb-1.5 flex items-center justify-between"><span class="font-mono text-[13px] text-textPrimary">JSP</span><span class="font-mono text-[11px] text-textFaint">80%</span></div><div class="h-1.5 w-full overflow-hidden rounded-full bg-white/5"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-accent to-accent2"></div></div></div>
+              <div data-skill data-level="85"><div class="mb-1.5 flex items-center justify-between"><span class="font-mono text-[13px] text-textPrimary">JDBC</span><span class="font-mono text-[11px] text-textFaint">85%</span></div><div class="h-1.5 w-full overflow-hidden rounded-full bg-white/5"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-accent to-accent2"></div></div></div>
+              <div data-skill data-level="45"><div class="mb-1.5 flex items-center justify-between"><span class="font-mono text-[13px] text-textPrimary">Spring Boot <span class="ml-2 rounded-full bg-warn/10 px-2 py-0.5 text-[10px] text-warn">learning</span></span><span class="font-mono text-[11px] text-textFaint">45%</span></div><div class="h-1.5 w-full overflow-hidden rounded-full bg-white/5"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-accent to-accent2"></div></div></div>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-1 glass rounded-3xl p-7">
+            <p class="font-mono text-xs text-textFaint">// interfaces &amp; client-side</p>
+            <h3 class="mt-2 mb-6 font-display text-lg font-semibold text-textPrimary">Frontend</h3>
+            <div class="space-y-5" data-skill-group>
+              <div data-skill data-level="90"><div class="mb-1.5 flex items-center justify-between"><span class="font-mono text-[13px] text-textPrimary">HTML</span><span class="font-mono text-[11px] text-textFaint">90%</span></div><div class="h-1.5 w-full overflow-hidden rounded-full bg-white/5"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-accent to-accent2"></div></div></div>
+              <div data-skill data-level="88"><div class="mb-1.5 flex items-center justify-between"><span class="font-mono text-[13px] text-textPrimary">CSS</span><span class="font-mono text-[11px] text-textFaint">88%</span></div><div class="h-1.5 w-full overflow-hidden rounded-full bg-white/5"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-accent to-accent2"></div></div></div>
+              <div data-skill data-level="78"><div class="mb-1.5 flex items-center justify-between"><span class="font-mono text-[13px] text-textPrimary">JavaScript</span><span class="font-mono text-[11px] text-textFaint">78%</span></div><div class="h-1.5 w-full overflow-hidden rounded-full bg-white/5"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-accent to-accent2"></div></div></div>
+              <div data-skill data-level="82"><div class="mb-1.5 flex items-center justify-between"><span class="font-mono text-[13px] text-textPrimary">Bootstrap</span><span class="font-mono text-[11px] text-textFaint">82%</span></div><div class="h-1.5 w-full overflow-hidden rounded-full bg-white/5"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-accent to-accent2"></div></div></div>
+              <div data-skill data-level="80"><div class="mb-1.5 flex items-center justify-between"><span class="font-mono text-[13px] text-textPrimary">Tailwind CSS</span><span class="font-mono text-[11px] text-textFaint">80%</span></div><div class="h-1.5 w-full overflow-hidden rounded-full bg-white/5"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-accent to-accent2"></div></div></div>
+              <div data-skill data-level="55"><div class="mb-1.5 flex items-center justify-between"><span class="font-mono text-[13px] text-textPrimary">React <span class="ml-2 rounded-full bg-warn/10 px-2 py-0.5 text-[10px] text-warn">basic</span></span><span class="font-mono text-[11px] text-textFaint">55%</span></div><div class="h-1.5 w-full overflow-hidden rounded-full bg-white/5"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-accent to-accent2"></div></div></div>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-2 glass rounded-3xl p-7">
+            <p class="font-mono text-xs text-textFaint">// storage &amp; workflow</p>
+            <h3 class="mt-2 mb-6 font-display text-lg font-semibold text-textPrimary">Tools &amp; Data</h3>
+            <div class="space-y-5" data-skill-group>
+              <div data-skill data-level="82"><div class="mb-1.5 flex items-center justify-between"><span class="font-mono text-[13px] text-textPrimary">MySQL</span><span class="font-mono text-[11px] text-textFaint">82%</span></div><div class="h-1.5 w-full overflow-hidden rounded-full bg-white/5"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-accent to-accent2"></div></div></div>
+              <div data-skill data-level="80"><div class="mb-1.5 flex items-center justify-between"><span class="font-mono text-[13px] text-textPrimary">Git</span><span class="font-mono text-[11px] text-textFaint">80%</span></div><div class="h-1.5 w-full overflow-hidden rounded-full bg-white/5"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-accent to-accent2"></div></div></div>
+              <div data-skill data-level="85"><div class="mb-1.5 flex items-center justify-between"><span class="font-mono text-[13px] text-textPrimary">GitHub</span><span class="font-mono text-[11px] text-textFaint">85%</span></div><div class="h-1.5 w-full overflow-hidden rounded-full bg-white/5"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-accent to-accent2"></div></div></div>
+              <div data-skill data-level="85"><div class="mb-1.5 flex items-center justify-between"><span class="font-mono text-[13px] text-textPrimary">Eclipse</span><span class="font-mono text-[11px] text-textFaint">85%</span></div><div class="h-1.5 w-full overflow-hidden rounded-full bg-white/5"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-accent to-accent2"></div></div></div>
+              <div data-skill data-level="90"><div class="mb-1.5 flex items-center justify-between"><span class="font-mono text-[13px] text-textPrimary">VS Code</span><span class="font-mono text-[11px] text-textFaint">90%</span></div><div class="h-1.5 w-full overflow-hidden rounded-full bg-white/5"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-accent to-accent2"></div></div></div>
+              <div data-skill data-level="78"><div class="mb-1.5 flex items-center justify-between"><span class="font-mono text-[13px] text-textPrimary">Postman</span><span class="font-mono text-[11px] text-textFaint">78%</span></div><div class="h-1.5 w-full overflow-hidden rounded-full bg-white/5"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-accent to-accent2"></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="relative py-28">
+      <div class="container-px mx-auto max-w-6xl">
+        <div class="reveal mb-14">
+          <p class="section-label">// 04 projects</p>
+          <h2 class="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl">Things I've built</h2>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+
+          <div class="reveal project-card group relative flex flex-col overflow-hidden rounded-3xl glass transition-shadow duration-300 hover:shadow-2xl hover:shadow-black/40">
+            <div class="relative flex h-40 flex-col justify-between overflow-hidden p-4" style="background:linear-gradient(135deg, #6e8cff22, transparent 70%);">
+              <div class="flex items-center gap-1.5">
+                <span class="h-2.5 w-2.5 rounded-full" style="background:#ff5f57;"></span><span class="h-2.5 w-2.5 rounded-full" style="background:#febc2e;"></span><span class="h-2.5 w-2.5 rounded-full" style="background:#28c840;"></span>
+                <span class="ml-2 font-mono text-[11px] text-textFaint">QuickHirePortal.java</span>
+              </div>
+              <div class="project-icon font-display text-3xl font-semibold opacity-20 transition-transform duration-500" style="color:#6e8cff;">&lt;/&gt;</div>
+              <div class="project-glow pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500" style="background:radial-gradient(circle at 70% 30%, #6e8cff30, transparent 60%);"></div>
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="font-display text-lg font-semibold text-textPrimary">Quick Hire Portal</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-textMuted">A job-hiring portal connecting recruiters and candidates, with role-based dashboards, listing management, and application tracking backed by a relational database.</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-full bg-white/5 px-3 py-1 font-mono text-[11px] text-textMuted">Java</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 font-mono text-[11px] text-textMuted">Servlet</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 font-mono text-[11px] text-textMuted">JSP</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 font-mono text-[11px] text-textMuted">JDBC</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 font-mono text-[11px] text-textMuted">MySQL</span>
+              </div>
+              <div class="mt-6 flex items-center gap-3">
+                <a href="https://github.com/anuragsingh/quick-hire-portal" target="_blank" rel="noreferrer" class="inline-flex flex-1 items-center justify-center gap-2 rounded-full glass-strong px-4 py-2.5 text-xs font-medium text-textPrimary transition-colors hover:bg-white/10">
+                  <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.2.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                  Code
+                </a>
+                <a href="#" class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent2 px-4 py-2.5 text-xs font-medium text-void transition-transform hover:scale-105">
+                  <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-1 project-card group relative flex flex-col overflow-hidden rounded-3xl glass transition-shadow duration-300 hover:shadow-2xl hover:shadow-black/40">
+            <div class="relative flex h-40 flex-col justify-between overflow-hidden p-4" style="background:linear-gradient(135deg, #37e6c322, transparent 70%);">
+              <div class="flex items-center gap-1.5">
+                <span class="h-2.5 w-2.5 rounded-full" style="background:#ff5f57;"></span><span class="h-2.5 w-2.5 rounded-full" style="background:#febc2e;"></span><span class="h-2.5 w-2.5 rounded-full" style="background:#28c840;"></span>
+                <span class="ml-2 font-mono text-[11px] text-textFaint">AttendanceManager.java</span>
+              </div>
+              <div class="project-icon font-display text-3xl font-semibold opacity-20 transition-transform duration-500" style="color:#37e6c3;">&lt;/&gt;</div>
+              <div class="project-glow pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500" style="background:radial-gradient(circle at 70% 30%, #37e6c330, transparent 60%);"></div>
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="font-display text-lg font-semibold text-textPrimary">Student Attendance Management System</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-textMuted">A system for faculty to record, edit, and report student attendance across classes, with authenticated access and exportable session-wise reports.</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-full bg-white/5 px-3 py-1 font-mono text-[11px] text-textMuted">Java</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 font-mono text-[11px] text-textMuted">Servlet</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 font-mono text-[11px] text-textMuted">JSP</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 font-mono text-[11px] text-textMuted">JDBC</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 font-mono text-[11px] text-textMuted">MySQL</span>
+              </div>
+              <div class="mt-6 flex items-center gap-3">
+                <a href="https://github.com/anuragsingh/attendance-management-system" target="_blank" rel="noreferrer" class="inline-flex flex-1 items-center justify-center gap-2 rounded-full glass-strong px-4 py-2.5 text-xs font-medium text-textPrimary transition-colors hover:bg-white/10">
+                  <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.2.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                  Code
+                </a>
+                <a href="#" class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent2 px-4 py-2.5 text-xs font-medium text-void transition-transform hover:scale-105">
+                  <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-2 project-card group relative flex flex-col overflow-hidden rounded-3xl glass transition-shadow duration-300 hover:shadow-2xl hover:shadow-black/40">
+            <div class="relative flex h-40 flex-col justify-between overflow-hidden p-4" style="background:linear-gradient(135deg, #b98cff22, transparent 70%);">
+              <div class="flex items-center gap-1.5">
+                <span class="h-2.5 w-2.5 rounded-full" style="background:#ff5f57;"></span><span class="h-2.5 w-2.5 rounded-full" style="background:#febc2e;"></span><span class="h-2.5 w-2.5 rounded-full" style="background:#28c840;"></span>
+                <span class="ml-2 font-mono text-[11px] text-textFaint">index.html</span>
+              </div>
+              <div class="project-icon font-display text-3xl font-semibold opacity-20 transition-transform duration-500" style="color:#b98cff;">&lt;/&gt;</div>
+              <div class="project-glow pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500" style="background:radial-gradient(circle at 70% 30%, #b98cff30, transparent 60%);"></div>
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="font-display text-lg font-semibold text-textPrimary">Spotify Clone</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-textMuted">A pixel-close recreation of the Spotify web player UI, with a working playlist, custom audio controls, and a responsive layout across devices.</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-full bg-white/5 px-3 py-1 font-mono text-[11px] text-textMuted">HTML</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 font-mono text-[11px] text-textMuted">CSS</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 font-mono text-[11px] text-textMuted">JavaScript</span>
+              </div>
+              <div class="mt-6 flex items-center gap-3">
+                <a href="https://github.com/anuragsingh/spotify-clone" target="_blank" rel="noreferrer" class="inline-flex flex-1 items-center justify-center gap-2 rounded-full glass-strong px-4 py-2.5 text-xs font-medium text-textPrimary transition-colors hover:bg-white/10">
+                  <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.2.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                  Code
+                </a>
+                <a href="#" class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent2 px-4 py-2.5 text-xs font-medium text-void transition-transform hover:scale-105">
+                  <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal project-card group relative flex flex-col overflow-hidden rounded-3xl glass transition-shadow duration-300 hover:shadow-2xl hover:shadow-black/40">
+            <div class="relative flex h-40 flex-col justify-between overflow-hidden p-4" style="background:linear-gradient(135deg, #ffb45422, transparent 70%);">
+              <div class="flex items-center gap-1.5">
+                <span class="h-2.5 w-2.5 rounded-full" style="background:#ff5f57;"></span><span class="h-2.5 w-2.5 rounded-full" style="background:#febc2e;"></span><span class="h-2.5 w-2.5 rounded-full" style="background:#28c840;"></span>
+                <span class="ml-2 font-mono text-[11px] text-textFaint">weather.js</span>
+              </div>
+              <div class="project-icon font-display text-3xl font-semibold opacity-20 transition-transform duration-500" style="color:#ffb454;">&lt;/&gt;</div>
+              <div class="project-glow pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500" style="background:radial-gradient(circle at 70% 30%, #ffb45430, transparent 60%);"></div>
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="font-display text-lg font-semibold text-textPrimary">Weather Forecast Website</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-textMuted">A location-aware weather app that fetches live conditions and a multi-day forecast from a public API, with graceful loading and error states.</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-full bg-white/5 px-3 py-1 font-mono text-[11px] text-textMuted">HTML</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 font-mono text-[11px] text-textMuted">CSS</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 font-mono text-[11px] text-textMuted">JavaScript</span>
+              </div>
+              <div class="mt-6 flex items-center gap-3">
+                <a href="https://github.com/anuragsingh/weather-forecast" target="_blank" rel="noreferrer" class="inline-flex flex-1 items-center justify-center gap-2 rounded-full glass-strong px-4 py-2.5 text-xs font-medium text-textPrimary transition-colors hover:bg-white/10">
+                  <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.2.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                  Code
+                </a>
+                <a href="#" class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent2 px-4 py-2.5 text-xs font-medium text-void transition-transform hover:scale-105">
+                  <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-1 project-card group relative flex flex-col overflow-hidden rounded-3xl glass transition-shadow duration-300 hover:shadow-2xl hover:shadow-black/40">
+            <div class="relative flex h-40 flex-col justify-between overflow-hidden p-4" style="background:linear-gradient(135deg, #6e8cff22, transparent 70%);">
+              <div class="flex items-center gap-1.5">
+                <span class="h-2.5 w-2.5 rounded-full" style="background:#ff5f57;"></span><span class="h-2.5 w-2.5 rounded-full" style="background:#febc2e;"></span><span class="h-2.5 w-2.5 rounded-full" style="background:#28c840;"></span>
+                <span class="ml-2 font-mono text-[11px] text-textFaint">monitor.py</span>
+              </div>
+              <div class="project-icon font-display text-3xl font-semibold opacity-20 transition-transform duration-500" style="color:#6e8cff;">&lt;/&gt;</div>
+              <div class="project-glow pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500" style="background:radial-gradient(circle at 70% 30%, #6e8cff30, transparent 60%);"></div>
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="font-display text-lg font-semibold text-textPrimary">CPU Monitoring Tool</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-textMuted">A desktop utility that graphs live CPU, memory, and process usage in real time, built for quick diagnostics during development.</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-full bg-white/5 px-3 py-1 font-mono text-[11px] text-textMuted">Python</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 font-mono text-[11px] text-textMuted">Tkinter</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 font-mono text-[11px] text-textMuted">Matplotlib</span>
+              </div>
+              <div class="mt-6 flex items-center gap-3">
+                <a href="https://github.com/anuragsingh/cpu-monitoring-tool" target="_blank" rel="noreferrer" class="inline-flex flex-1 items-center justify-center gap-2 rounded-full glass-strong px-4 py-2.5 text-xs font-medium text-textPrimary transition-colors hover:bg-white/10">
+                  <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.2.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                  Code
+                </a>
+                <a href="#" class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent2 px-4 py-2.5 text-xs font-medium text-void transition-transform hover:scale-105">
+                  <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research" class="relative py-28">
+      <div class="container-px mx-auto max-w-6xl">
+        <div class="reveal mb-14">
+          <p class="section-label">// 05 research</p>
+          <h2 class="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl">Published research</h2>
+        </div>
+
+        <div class="reveal relative overflow-hidden rounded-3xl glass-strong p-8 sm:p-12">
+          <div class="absolute -top-24 -right-24 h-64 w-64 rounded-full blur-[100px]" style="background:#b98cff; opacity:0.25;"></div>
+          <div class="relative flex flex-col gap-8 lg:flex-row lg:items-center">
+            <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-accent to-accent3 text-void">
+              <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            </div>
+            <div class="flex-1">
+              <div class="mb-3 flex flex-wrap items-center gap-3">
+                <span class="rounded-full bg-accent2/15 px-3 py-1 font-mono text-xs text-accent2">RACCAI 2026</span>
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-white/5 px-3 py-1 font-mono text-xs text-textPrimary">
+                  <svg class="icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  Accepted
+                </span>
+              </div>
+              <h3 class="font-display text-xl font-semibold leading-snug text-textPrimary sm:text-2xl">ClassSync: A Serverless Browser-Native Real-Time Multilingual Classroom Translation Framework</h3>
+              <p class="mt-4 max-w-3xl text-sm leading-relaxed text-textMuted sm:text-base">A framework for real-time multilingual translation inside live classrooms, running entirely in-browser with no dedicated server, aimed at making lectures accessible across language barriers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="relative py-28">
+      <div class="container-px mx-auto max-w-6xl">
+        <div class="reveal mb-14">
+          <p class="section-label">// 06 achievements</p>
+          <h2 class="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl">Highlights</h2>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="reveal glass rounded-2xl p-7 transition-shadow hover:shadow-xl hover:shadow-black/30">
+            <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-accent/20 to-accent2/20 text-accent2"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg></div>
+            <h3 class="font-display text-base font-semibold text-textPrimary">Research Paper Accepted</h3>
+            <p class="mt-2 text-sm leading-relaxed text-textMuted">ClassSync accepted at RACCAI 2026</p>
+          </div>
+          <div class="reveal reveal-delay-1 glass rounded-2xl p-7 transition-shadow hover:shadow-xl hover:shadow-black/30">
+            <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-accent/20 to-accent2/20 text-accent2"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div>
+            <h3 class="font-display text-base font-semibold text-textPrimary">Multiple Full Stack Projects</h3>
+            <p class="mt-2 text-sm leading-relaxed text-textMuted">Shipped 5+ projects spanning backend, web, and tooling</p>
+          </div>
+          <div class="reveal reveal-delay-2 glass rounded-2xl p-7 transition-shadow hover:shadow-xl hover:shadow-black/30">
+            <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-accent/20 to-accent2/20 text-accent2"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div>
+            <h3 class="font-display text-base font-semibold text-textPrimary">Strong Java Backend Development</h3>
+            <p class="mt-2 text-sm leading-relaxed text-textMuted">Servlets, JSP, JDBC, and growing Spring Boot expertise</p>
+          </div>
+          <div class="reveal glass rounded-2xl p-7 transition-shadow hover:shadow-xl hover:shadow-black/30">
+            <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-accent/20 to-accent2/20 text-accent2"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l6 6"></path><path d="M4 14l6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="M22 22l-5-10-5 10"></path><path d="M14 18h6"></path></svg></div>
+            <h3 class="font-display text-base font-semibold text-textPrimary">Good English Communication</h3>
+            <p class="mt-2 text-sm leading-relaxed text-textMuted">Confident presenting technical work to any audience</p>
+          </div>
+          <div class="reveal reveal-delay-1 glass rounded-2xl p-7 transition-shadow hover:shadow-xl hover:shadow-black/30">
+            <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-accent/20 to-accent2/20 text-accent2"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></div>
+            <h3 class="font-display text-base font-semibold text-textPrimary">Continuous Learner</h3>
+            <p class="mt-2 text-sm leading-relaxed text-textMuted">Currently deepening Spring Boot and system design</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume" class="relative py-28">
+      <div class="container-px mx-auto max-w-6xl">
+        <div class="reveal relative overflow-hidden rounded-3xl glass-strong p-10 text-center sm:p-16">
+          <div class="absolute left-1/2 top-0 -z-10 h-64 w-[36rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/20 blur-[110px]"></div>
+          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-accent to-accent2 text-void">
+            <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+          <h2 class="mt-6 font-display text-2xl font-semibold tracking-tight sm:text-3xl">Want the full picture?</h2>
+          <p class="mx-auto mt-3 max-w-md text-sm leading-relaxed text-textMuted sm:text-base">Grab a copy of my resume for a detailed look at my experience, projects, and education.</p>
+          <a href="data:application/pdf;base64,JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUiAvRjMgNCAwIFIgL0Y0IDUgMCBSCj4+CmVuZG9iagoyIDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GMSAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EtQm9sZCAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjIgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iago0IDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhLU9ibGlxdWUgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YzIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNSAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkT2JsaXF1ZSAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjQgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Db250ZW50cyAxMSAwIFIgL01lZGlhQm94IFsgMCAwIDYxMiA3OTIgXSAvUGFyZW50IDEwIDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAvVHJhbnMgPDwKCj4+IAogIC9UeXBlIC9QYWdlCj4+CmVuZG9iago3IDAgb2JqCjw8Ci9Db250ZW50cyAxMiAwIFIgL01lZGlhQm94IFsgMCAwIDYxMiA3OTIgXSAvUGFyZW50IDEwIDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAvVHJhbnMgPDwKCj4+IAogIC9UeXBlIC9QYWdlCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9QYWdlTW9kZSAvVXNlTm9uZSAvUGFnZXMgMTAgMCBSIC9UeXBlIC9DYXRhbG9nCj4+CmVuZG9iago5IDAgb2JqCjw8Ci9BdXRob3IgKFwoYW5vbnltb3VzXCkpIC9DcmVhdGlvbkRhdGUgKEQ6MjAyNjA3MTAwNDQxNDMrMDAnMDAnKSAvQ3JlYXRvciAoXCh1bnNwZWNpZmllZFwpKSAvS2V5d29yZHMgKCkgL01vZERhdGUgKEQ6MjAyNjA3MTAwNDQxNDMrMDAnMDAnKSAvUHJvZHVjZXIgKFJlcG9ydExhYiBQREYgTGlicmFyeSAtIFwob3BlbnNvdXJjZVwpKSAKICAvU3ViamVjdCAoXCh1bnNwZWNpZmllZFwpKSAvVGl0bGUgKFwoYW5vbnltb3VzXCkpIC9UcmFwcGVkIC9GYWxzZQo+PgplbmRvYmoKMTAgMCBvYmoKPDwKL0NvdW50IDIgL0tpZHMgWyA2IDAgUiA3IDAgUiBdIC9UeXBlIC9QYWdlcwo+PgplbmRvYmoKMTEgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggMjA3Mgo+PgpzdHJlYW0KR2F1SEw5NjkpXiZBSiRDb0hkTW8iTEsoPSNhQTdBYGluPCtDcERaTzA3dSpzYDAqVGopOFQ0OSsubyw6QC9MIjc4ZFVgLThCbDcrclVuVkJDalpsZSlQbUZILFBaWFBKMmY2TyE6X1RON0tfazg6NEFecFEpKmtOSWMoPjNnLD8zYFwpIm1YaUdIZDNTW1IsT2JPLj8tYjY8ZWBVdV9oWDlNYi5PWjtLKWhQPmZ1aUpFKD5hTmhcSiVHLWVLSTtbQFksU1VIKztoXz1uLFgxY0Y2KWxpajNIVj0lPG88IjxCVDlyT2QmdSlSJ15pRjZNNVw2OEkmXnBCaEMzUiVZQkhOYyRjb0hlOSlFa0FXTDMjN2NNOSZnIz9qbydvVmc4SFQuJEZkI0tsVk5uSD03bixiKlpjKiEkJEgnKENwMSJOMWUkIVReYSZAP2xpXiRHLlplRiJwNl5tWyVxbDwnc21dWGxtR08hS05YRi5mMSVxYElYPnFwRGxET0RPNEVQOCwjYlhWal1FVm9cTjhPZHJnJSozWlVZZiZiZks/az5QbklLWm9WRGQrTCZZclJoTWpfW0kkdXA8YkUuS1NcUVMnJiwyRDxSNWxEb1lOJmhObkpxSVldXi5jO25XKnQpPFlcK2M6NU1uPCYzPSxmbEw9Zj1gViNvKDUtQzQ/RCg/cWBjQTM6aChrcjBNLE1qcmFTbzswKUBjWjxaPSc5NS9wLWJAOSQ2cTBeMzZOS01yRzlWNGBYOz5uYT0/MVcsLC51QChkblFUVzVrczNOaVJEIVtFTzlgWnBEISxTaE1IMEUtJEtaQ0ItZXNCZCI3OmZHYEZXUiUoRy5LTV1JNUBeJUA4PW5WQlZuY0k+bTBMQjAhQyFpLmwvUmslODNAZ0M8KypqIz9UTVpsLktXRU1mVFJpTEMyTjFYRTw6Ri1tM3EhckdQX0J1UkxiNmpXL2BDXlMoZiJlNW5WQVlsPDZGYnViWlVoI2BYLDstO0MkPWpZbFRhMEY8UU9eInNmL0lYSDU2MDx1TkRiV1s7JScxKEF0dUgsQStbSm83USJHYzciJmNwZltKLCpqX148XFRCRkxlbzJEOFdOM2koZXBIVlZbVDtROG0pRW4ub2pxaS08K3V0MDosU0E8KkJPRkwkUjUsT1QiY2heJGIrXGxeKzBCPjZNVE84UzRHMlBtVUc4RDApPD9dJUArXmZCX0VhPlRLOC9vYSxLQEZrZ0dfZydKIVpjYEBfOkFmKGYjLDIkP1g+a0RYTCpoVWtpcCs0WD0sIl5GT0AzamgxXlteI1FlOEFvY3AhNmZwcWdOREw+bjRLXTZROFxIUEJpMUpibGkrKCNRM1pPQWZdX1htYDUubFNFR2AibChKVSJgKFZVOFBPXyknLy9BIiY7W0wwN1hRa3JhKi1zRScvJVg+XkRdOFhRcEMxNztUYlZbbGQjIkBFcDN0XDwsNy04R0ZDKlhAW2shPEpSXUg6YGhuL2AqaDxQT25yOj40ZyNsIUdEJ0RUVzAnIV4xNUNCaioyaTRTN1dYJycjM09UQElLZj86bicuczskK25YTydhYERDc2xYN2gqSShfNS5MQUBsLDBTPz1DMV9sJXBuZEFrNS8oWUNuIzN0PThPZjFVVltCUCYwa2AuaWVKQjEuI3NOQVJlazlTWXVqTjJibWM/Pm9VVjRsLy9yTVA8IztjUHNwaUhLZ0ZEQVUkL2RLPzVBMj9sQj82YUYvVCE8Vi1wTix0QmBcamYwOlpUSD5JQlFlNi1SJEYvZzdwZ0dTSDh0UkdiMlw5SV5XcypKay00MydxOCsiNG1aKUIiPz8rQUsyPSlUbThpRGU5Vl86Q0cjZzw8WzpDQWBbJjRhckNfQCEjJHRYUldtXDFjPyN0OmVzdGtxb3QoIVUhXmk0QGNPRjdaLDk1S282ZC40QSEiSWlwSTtiZnJLQ2o+aG1LPkRAaUcvS2FgMUZzX0BbXkhXREdFc2c4VVVlOjFgOUg/Wy8lUjpOci9eR0h1MT9fXi1EXDhCQU5qK05EWUQyYW9zN0AkaFA+P3I5ZEE0ZUNtLTQ0NyY0OUdOMkliMVRuRCwvc28oOmZJNDdrdTVZP0JxIjUsLmVgTFYqQmcuRCFALCJZMiVAMk01ZUw4PD5dJzhfPFAlU11jRj1WZiY9UW5fSWoxLVw2KE9maCtbUkFBJlkjbU9kanBQLWZkclUtXUV0YDonLG0tbT4jclI/PmNBOktrKVtJaj5WVydDKmgqUE4yMUMnTCZwWDtxLFRXZGgxMzkvYUEtb3E7QUYpIyRoQWNTLEpFRj8salFgPlk+XCJJS0ROZjFEYXI9VCJPVSMhYD4tS2FCJCFqamUjLUJEYzhRaV4nZSQuIUM7Q1lwYkJjMXVDPkJiaGZHXUxrWDk3NW5DWSQtIk4+Xl0sKDFQQmNsJjJBKHJuPT5PYig3WT5pMlJjWzZEJCpYOFwwYktYQ11URy8sY2xELzZpKTlcUlk3JkQuOzkmWzEhT3IhVkchSicoJU9BX09JJ0lZUWQ/YVorJHU5L15JJmUkZTROYltwXk0rMGBnJjVQNkkwVituTUZMTlJAWlQzKG9jLllZU0wsal08PWolcF0tXGk+OjNZPDlLanFnNmBKO0IhYFBXWkIsWmYoI3BEMkxBWjcpRDw8cFxUJlJqVyM+ZDozTmVBcmAvZ1csZ1oxRTdIXUZAXV5BU2MpN1hva3FQPXJOUDFtbXAzVVwkcjZkKjRndDVUfj5lbmRzdHJlYW0KZW5kb2JqCjEyIDAgb2JqCjw8Ci9GaWx0ZXIgWyAvQVNDSUk4NURlY29kZSAvRmxhdGVEZWNvZGUgXSAvTGVuZ3RoIDcwMAo+PgpzdHJlYW0KR2F1MSs/VmZFMSdaSnUsLklKRzhCR05dMHBLImwiMGBmXjlabVQyOGpMLDEyNDB0SllyVXNLbydRcW1XM2xHSlZbWnAqSW8vZXJCSzktOVZtU3NYNjxsMm11IylrcFsiO1Y0c1BhPSdTN21CSzBXQTxSJD40QCtaNzFsPW1RSUEkRDlIMlorMCw9Xi9QalFpW09yQUBLQDFgNyM2KCUzbzoyJXB1UFhIJzpjQj5PN1pcIkM/J1w6Uj1XcWxpM1IlbWZaT18/PjopODM6Z2BuLydiQ1AzV0BFYTFMU19HcjZwLDkrJlVLbk5tRGRDUCVbI1w+OnNDQmBsalsoK05HaT5uMFc6cWheSz5MIyRsPCMnUWRsVms8XTlXKydeaSN0bmotJXUvVGBwXSJxbixQSVZPaFpccS9qYDwzKl8uYi5QWEA1RGgvXml1JWBUOkApIjRPYmslIlA6XWZuXC0oN2tcZ2tCITV1NGxnWWg8L24xWE4/R25UZVhrTmVLJ0FRay9QcyF0VFxOSChHZDI8IzJOPj1xMkYyJlVaIzIkVyplNTk0JVpcPmNuakU8azVOVTQiODprQUI6Rlk0TjomK01vSiw4ODlwM2gqQV0uVzg6XVVlL2YwTCgkLnFjZkB0UFUyNyk8LVFdR05dW3FNWWxOYl4wYzInYEYpQFBzSXBZUVhPcTRlYFYmV1xlV1dzKjhMJzkvamswRTE7WElUNyRfQl9xNz5pRkhVOWtkaHM/SWVwXF9IM3VYY2hfQl1VWFdSQkpOUTlZWCVxOT0sdTFqT2RTV2pPQW5pVjJITyNnUmdLc14+Q0dVNGcpJShxOEJUPm9WYDtgMnVDSy5LYSReLmZvLiMsVm1XcDVRZT1gZkk4YCIlUUQ0biI/JWNFcWJJRk0icGo+OlFsJTkpVHFVN1pUbXNKYyx+PmVuZHN0cmVhbQplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDA2MSAwMDAwMCBuIAowMDAwMDAwMTIyIDAwMDAwIG4gCjAwMDAwMDAyMjkgMDAwMDAgbiAKMDAwMDAwMDM0MSAwMDAwMCBuIAowMDAwMDAwNDU2IDAwMDAwIG4gCjAwMDAwMDA1NzUgMDAwMDAgbiAKMDAwMDAwMDc3MCAwMDAwMCBuIAowMDAwMDAwOTY1IDAwMDAwIG4gCjAwMDAwMDEwMzQgMDAwMDAgbiAKMDAwMDAwMTMxNCAwMDAwMCBuIAowMDAwMDAxMzgwIDAwMDAwIG4gCjAwMDAwMDM1NDQgMDAwMDAgbiAKdHJhaWxlcgo8PAovSUQgCls8YjEwODJjOWRlY2NhYjg0M2VlZGUyMWU4ZDZlNWE4YjM+PGIxMDgyYzlkZWNjYWI4NDNlZWRlMjFlOGQ2ZTVhOGIzPl0KJSBSZXBvcnRMYWIgZ2VuZXJhdGVkIFBERiBkb2N1bWVudCAtLSBkaWdlc3QgKG9wZW5zb3VyY2UpCgovSW5mbyA5IDAgUgovUm9vdCA4IDAgUgovU2l6ZSAxMwo+PgpzdGFydHhyZWYKNDMzNQolJUVPRgo=" download="Anurag_Singh_Resume.pdf" class="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent2 px-8 py-3.5 text-sm font-medium text-void transition-transform hover:scale-105">
+            <svg class="icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download Resume (PDF)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="relative py-28">
+      <div class="container-px mx-auto max-w-6xl">
+        <div class="reveal mb-14">
+          <p class="section-label">// 07 contact</p>
+          <h2 class="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl">Let's work together</h2>
+          <p class="mt-4 max-w-xl text-sm leading-relaxed text-textMuted sm:text-base">Have a role, project, or idea in mind? I'm quick to respond and always happy to talk.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-[0.85fr_1.15fr]">
+          <div class="reveal grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-1">
+            <a href="mailto:anurag.singh.dev@example.com" class="group flex items-center gap-4 rounded-2xl glass p-5 transition-colors hover:bg-white/5">
+              <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/5 text-accent2 transition-transform group-hover:scale-110"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span>
+              <span><span class="block font-mono text-[11px] uppercase tracking-wide text-textFaint">Email</span><span class="block text-sm text-textPrimary">anurag.singh.dev@example.com</span></span>
+            </a>
+            <a href="tel:+910000000000" class="group flex items-center gap-4 rounded-2xl glass p-5 transition-colors hover:bg-white/5">
+              <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/5 text-accent2 transition-transform group-hover:scale-110"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+              <span><span class="block font-mono text-[11px] uppercase tracking-wide text-textFaint">Phone</span><span class="block text-sm text-textPrimary">+91 00000 00000</span></span>
+            </a>
+            <a href="https://github.com/anuragsingh" target="_blank" rel="noreferrer" class="group flex items-center gap-4 rounded-2xl glass p-5 transition-colors hover:bg-white/5">
+              <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/5 text-accent2 transition-transform group-hover:scale-110"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.2.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg></span>
+              <span><span class="block font-mono text-[11px] uppercase tracking-wide text-textFaint">GitHub</span><span class="block text-sm text-textPrimary">github.com/anuragsingh</span></span>
+            </a>
+            <a href="https://linkedin.com/in/anuragsingh" target="_blank" rel="noreferrer" class="group flex items-center gap-4 rounded-2xl glass p-5 transition-colors hover:bg-white/5">
+              <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/5 text-accent2 transition-transform group-hover:scale-110"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.36 4.26 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.78C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.78 24h20.44c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/></svg></span>
+              <span><span class="block font-mono text-[11px] uppercase tracking-wide text-textFaint">LinkedIn</span><span class="block text-sm text-textPrimary">linkedin.com/in/anuragsingh</span></span>
+            </a>
+          </div>
+
+          <form id="contact-form" class="reveal reveal-delay-1 glass-strong space-y-5 rounded-3xl p-8 sm:p-10">
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <div>
+                <label for="name" class="mb-2 block font-mono text-xs text-textFaint">Name</label>
+                <input id="name" required placeholder="Your name" class="w-full rounded-xl border border-line bg-white/5 px-4 py-3 text-sm text-textPrimary placeholder-textFaint focus:border-accent2" />
+              </div>
+              <div>
+                <label for="email" class="mb-2 block font-mono text-xs text-textFaint">Email</label>
+                <input id="email" type="email" required placeholder="you@example.com" class="w-full rounded-xl border border-line bg-white/5 px-4 py-3 text-sm text-textPrimary placeholder-textFaint focus:border-accent2" />
+              </div>
+            </div>
+            <div>
+              <label for="message" class="mb-2 block font-mono text-xs text-textFaint">Message</label>
+              <textarea id="message" required rows="5" placeholder="Tell me about the role or project..." class="w-full resize-none rounded-xl border border-line bg-white/5 px-4 py-3 text-sm text-textPrimary placeholder-textFaint focus:border-accent2"></textarea>
+            </div>
+            <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent2 px-6 py-3.5 text-sm font-medium text-void transition-transform hover:scale-[1.02] sm:w-auto">
+              <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              Send Message
+            </button>
+            <p id="form-status" class="hidden font-mono text-xs text-accent2">Opening your email client...</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="relative border-t border-line py-10">
+    <div class="container-px mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
+      <p class="font-mono text-xs text-textFaint" id="footer-year">© 2026 Anurag Singh. Built with HTML &amp; Tailwind.</p>
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/anuragsingh" target="_blank" rel="noreferrer" aria-label="GitHub" class="text-textFaint transition-colors hover:text-accent2"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.2.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg></a>
+        <a href="https://linkedin.com/in/anuragsingh" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="text-textFaint transition-colors hover:text-accent2"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.36 4.26 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.78C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.78 24h20.44c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/></svg></a>
+        <a href="mailto:anurag.singh.dev@example.com" aria-label="Email" class="text-textFaint transition-colors hover:text-accent2"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('footer-year').textContent = '© ' + new Date().getFullYear() + ' Anurag Singh. Built with HTML & Tailwind.';
+
+    // Scroll progress bar
+    const progressBar = document.getElementById('scroll-progress-bar');
+    function updateProgress() {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? scrollTop / docHeight : 0;
+      progressBar.style.transform = 'scaleX(' + pct + ')';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+
+    // Navbar glass on scroll
+    const navbar = document.getElementById('navbar');
+    const desktopNav = document.getElementById('desktop-nav');
+    function updateNavbar() {
+      if (window.scrollY > 12) {
+        navbar.classList.add('py-3');
+        navbar.classList.remove('py-5');
+        desktopNav.classList.add('glass');
+      } else {
+        navbar.classList.add('py-5');
+        navbar.classList.remove('py-3');
+        desktopNav.classList.remove('glass');
+      }
+    }
+    window.addEventListener('scroll', updateNavbar, { passive: true });
+    updateNavbar();
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuOpenIcon = document.getElementById('menu-icon-open');
+    const menuCloseIcon = document.getElementById('menu-icon-close');
+    let menuOpen = false;
+    menuBtn.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      mobileMenu.classList.toggle('open', menuOpen);
+      menuBtn.setAttribute('aria-expanded', String(menuOpen));
+      menuOpenIcon.classList.toggle('hidden', menuOpen);
+      menuCloseIcon.classList.toggle('hidden', !menuOpen);
+    });
+    document.querySelectorAll('#mobile-menu a').forEach((a) => {
+      a.addEventListener('click', () => {
+        menuOpen = false;
+        mobileMenu.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuOpenIcon.classList.remove('hidden');
+        menuCloseIcon.classList.add('hidden');
+      });
+    });
+
+    // Typing effect
+    const typedEl = document.getElementById('typed-text');
+    const words = ['Anurag Singh', 'Java Backend Developer', 'Full Stack Developer'];
+    let wordIndex = 0, charIndex = 0, deleting = false;
+    function typeTick() {
+      const current = words[wordIndex % words.length];
+      if (!deleting) {
+        charIndex++;
+        typedEl.textContent = current.slice(0, charIndex);
+        if (charIndex === current.length) {
+          deleting = true;
+          setTimeout(typeTick, 1400);
+          return;
+        }
+        setTimeout(typeTick, 70);
+      } else {
+        charIndex--;
+        typedEl.textContent = current.slice(0, charIndex);
+        if (charIndex === 0) {
+          deleting = false;
+          wordIndex++;
+          setTimeout(typeTick, 300);
+          return;
+        }
+        setTimeout(typeTick, 40);
+      }
+    }
+    typeTick();
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach((el) => revealObserver.observe(el));
+
+    // Skill bar fill on view
+    const skillEls = document.querySelectorAll('[data-skill]');
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const level = entry.target.getAttribute('data-level');
+          const fill = entry.target.querySelector('.skill-bar-fill');
+          requestAnimationFrame(() => { fill.style.width = level + '%'; });
+          skillObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    skillEls.forEach((el) => skillObserver.observe(el));
+
+    // Contact form -> mailto
+    const form = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      const subject = encodeURIComponent('Portfolio inquiry from ' + (name || 'a visitor'));
+      const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
+      window.location.href = 'mailto:anurag.singh.dev@example.com?subject=' + subject + '&body=' + body;
+      formStatus.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
